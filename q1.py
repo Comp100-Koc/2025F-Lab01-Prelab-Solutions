@@ -4,6 +4,6 @@ Implement a function named calculate_f, which takes x as an argument, and return
 """
 
 def calculate_f(x):
-  result = (5x-3)/(2x+6)
+  result = (5*x-3)/(2*x+6)
   return result
   
