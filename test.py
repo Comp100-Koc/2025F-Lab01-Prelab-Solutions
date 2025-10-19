@@ -4,23 +4,29 @@ except:
     calculate_f = lambda x: None
 
 try:
-    from q2 import solve_quadratic
+    from q2 import to_celsius
+except:
+    to_celsius = lambda x: None
+
+try:
+    from q3 import solve_quadratic
 except:
     solve_quadratic = lambda x,y,z: None
 
 try:
-    from q3 import calculate_distance
+    from q4 import calculate_distance
 except:
     calculate_distance = lambda x,y: None
 
 try:
-    from q4 import calculate_area
+    from q5 import calculate_area
 except:
     calculate_area = lambda x,y, z: None 
 
 def is_close(x, y):
     return abs(x - y) < 1e-6
 
+# Q1 Tests
 def test_q1_1():
     assert is_close(calculate_f(3), 1)
 
@@ -30,31 +36,44 @@ def test_q1_2():
 def test_q1_3():
     assert is_close(calculate_f(15), 2)
 
+# Q2 Tests
 def test_q2_1():
-    assert is_close(solve_quadratic(1, -5, 6), 2)
+    assert is_close(to_celsius(14), -10.0)
 
 def test_q2_2():
-    assert is_close(solve_quadratic(5.0, -33, 50.4), 2.4)
+    assert is_close(to_celsius(32), 0)    
 
 def test_q2_3():
-    assert is_close(solve_quadratic(2, 25, 75), -7.5)
+    assert is_close(to_celsius(50), 10.0)
 
+# Q3 Tests
 def test_q3_1():
-    assert is_close(calculate_distance(-2, -2, -2, -2), 0)
+    assert is_close(solve_quadratic(1, -5, 6), 2)
 
 def test_q3_2():
-    assert is_close(calculate_distance(3, 5, 9, 13), 10)
+    assert is_close(solve_quadratic(5.0, -33, 50.4), 2.4)
 
 def test_q3_3():
-    assert is_close(calculate_distance(0, 3, 4, 0), 5)
+    assert is_close(solve_quadratic(2, 25, 75), -7.5)
 
+# Q4 Tests
 def test_q4_1():
-    assert is_close(calculate_area(6.25, 4.25, 6.5), 12.75)
+    assert is_close(calculate_distance(-2, -2, -2, -2), 0)
 
 def test_q4_2():
-    assert is_close(calculate_area(20.5, 20.5, 9), 90)
+    assert is_close(calculate_distance(3, 5, 9, 13), 10)
 
 def test_q4_3():
+    assert is_close(calculate_distance(0, 3, 4, 0), 5)
+
+# Q5 Tests
+def test_q5_1():
+    assert is_close(calculate_area(6.25, 4.25, 6.5), 12.75)
+
+def test_q5_2():
+    assert is_close(calculate_area(20.5, 20.5, 9), 90)
+
+def test_q5_3():
     assert is_close(calculate_area(14.32, 18.53, 5.612), 30.027385522357424)
 
 if __name__ == '__main__':
@@ -97,3 +116,13 @@ if __name__ == '__main__':
         except:
             pass
     print(f'Question 4: {q4_passed}/{len(tests_q4)} Tests Passed')
+
+    tests_q5 = [test_q5_1, test_q5_2, test_q5_3]
+    q5_passed = 0
+    for test in tests_q5:
+        try:
+            test()
+            q5_passed += 1
+        except:
+            pass
+    print(f'Question 5: {q5_passed}/{len(tests_q5)} Tests Passed')
