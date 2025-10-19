@@ -11,6 +11,23 @@ Remember that the testcases inside the `test.py` are just sample testcases, and 
 
 *Hint: In order to calculate the square root of a number, you can raise it to the power of 0.5*
 
+## Question 0 (Bonus Question)
+A quadratic equation is an equation of the form $ax^2+bx+c=0$.
+
+One of the solutions of the quadratic equation is $$x=\frac{-b-\sqrt{b^2-4ac}}{2a}$$
+
+Implement a function named `solve_quadratic` which takes three arguments: `a`, `b`, and `c`, which are the coefficients of the quadratic equation. This function should return the solution written above. You can assume that the quadratic equation will always have a solution.
+
+
+
+**Note:** For a quadratic equation, $x=\frac{-b+\sqrt{b^2-4ac}}{2a}$ is also a solution. However, please ignore this and only return the solution written above.
+
+### Examples: 
+```python
+solve_quadratic(1, -5, 6) # should return 2.0
+solve_quadratic(5, -33, 50.4) # should return 2.4
+```
+
 ## Question 1 (25 Points)
 
 ### Part a
@@ -106,22 +123,4 @@ parameters, the function should return the converted temperature.
 print(convert_temperature(100, 'C')) # Output: 212.0
 print(convert_temperature(32, 'F')) # Output: 0.0
 print(convert_temperature(20, 'X')) # Output: None
-```
-
-
-## Question 3 (Bonus Question)
-A quadratic equation is an equation of the form $ax^2+bx+c=0$.
-
-One of the solutions of the quadratic equation is $$x=\frac{-b-\sqrt{b^2-4ac}}{2a}$$
-
-Implement a function named `solve_quadratic` which takes three arguments: `a`, `b`, and `c`, which are the coefficients of the quadratic equation. This function should return the solution written above. You can assume that the quadratic equation will always have a solution.
-
-
-
-**Note:** For a quadratic equation, $x=\frac{-b+\sqrt{b^2-4ac}}{2a}$ is also a solution. However, please ignore this and only return the solution written above.
-
-### Examples: 
-```python
-solve_quadratic(1, -5, 6) # should return 2.0
-solve_quadratic(5, -33, 50.4) # should return 2.4
 ```
