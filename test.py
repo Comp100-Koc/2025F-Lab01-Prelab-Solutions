@@ -24,6 +24,13 @@ except:
     print('q2 import failed')
     convert_temperature = lambda *a: 1000000
 
+
+try:
+    from q3 import solve_quadratic
+except:
+    print('q3 import failed')
+    solve_quadratic = lambda *a: None
+
 # --- Helper ---
 def is_close(x, y):
     try:
@@ -51,11 +58,17 @@ def test_q2_4(): return convert_temperature(32, "F"), 0
 def test_q2_5(): return convert_temperature(-40, "F"), -40
 def test_q2_6(): return convert_temperature(-40, "C"), -40
 
+
+def test_q3_1(): return solve_quadratic(1, -5, 6), 2
+def test_q3_2(): return solve_quadratic(5, -33, 50.4), 2.4
+def test_q3_3(): return solve_quadratic(5, -33, 50.4), 2.4
+
 tests = {
     'q1a': [test_q1a_1, test_q1a_2, test_q1a_3],
     'q1b': [test_q1b_1, test_q1b_2, test_q1b_3],
     'q1c': [test_q1c_1, test_q1c_2, test_q1c_3],
-    'q2':  [test_q2_1, test_q2_2, test_q2_3, test_q2_4, test_q2_5, test_q2_6]
+    'q2':  [test_q2_1, test_q2_2, test_q2_3, test_q2_4, test_q2_5, test_q2_6],
+    'q3':  [test_q3_1, test_q3_2, test_q3_3],
 }
 
 passed = {k: 0 for k in tests.keys()}
