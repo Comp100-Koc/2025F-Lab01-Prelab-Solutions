@@ -4,3 +4,5 @@ to_celsius takes one argument: f, which is the temperature in Fahrenheit and sho
 """
 
 def to_celsius(f):
+  c = (f-32)/1.8
+  return c
