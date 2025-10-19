@@ -5,7 +5,7 @@ This function should return the Euclidean distance between these two points.
 Part b) Implement a function named area_from_sides, which takes three arguments: a, b, and c, which are the lengths of the three sides. 
 This function should return the area of the triangle.
 
-Part c) Implement a function named area_from_vertices, which takes three arguments: x1, y1, x2, y2, x3, y3, which are the coordinates of the vertices of a triangle. 
+Part c) Implement a function named area_from_vertices, which takes six arguments: x1, y1, x2, y2, x3, y3, representing the coordinates of three vertices (x1, y1), (x2, y2), and (x3, y3). 
 This function should return the area of the triangle.
 """
 
