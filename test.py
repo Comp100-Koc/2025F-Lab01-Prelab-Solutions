@@ -41,32 +41,32 @@ def test_q1_6():
     assert is_close(area_from_sides(14.32, 18.53, 5.612), 30.027385522357424)
 
 def test_q1_7():
-    assert is_close(area_from_vertices(6.25, 4.25, 6.5), 12.75)
+    assert is_close(area_from_vertices(0, 0, 3, 0, 0, 4), 6)
 
 def test_q1_8():
-    assert is_close(area_from_vertices(20.5, 20.5, 9), 90)
+    assert is_close(area_from_vertices(-5, 0, 5, 0, 0, 5), 25)
 
 def test_q1_9():
-    assert is_close(area_from_vertices(14.32, 18.53, 5.612), 30.027385522357424)
+    assert is_close(area_from_vertices(-4, 0, 4, 0, 4, 4), 16)
 
 # Q2 Tests
 def test_q2_1():
-    assert is_close(convert_temperature(14, "F"), -10.0)
+    assert is_close(convert_temperature(100, "C"), 212)
 
 def test_q2_2():
-    assert is_close(convert_temperature(32, "F"), 0)    
+    assert is_close(convert_temperature(212, "F"), 100)    
 
 def test_q2_3():
-    assert is_close(convert_temperature(10, "C"), 50.0)
+    assert is_close(convert_temperature(212, "K"), None)
 
 def test_q2_4():
-    assert is_close(convert_temperature(0, "C"), 32.0)
+    assert is_close(convert_temperature(32, "F"), 0)
 
 def test_q2_5():
-    assert is_close(convert_temperature(10, "X"), None)
+    assert is_close(convert_temperature(-40, "F"), -40)
 
 def test_q2_6():
-    assert is_close(convert_temperature(20, "CF"), None)
+    assert is_close(convert_temperature(-40, "C"), -40)
 
 # Q3 Tests
 def test_q3_1():
