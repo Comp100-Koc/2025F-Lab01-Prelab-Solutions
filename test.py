@@ -17,6 +17,8 @@ except:
 
 
 def is_close(x, y):
+    if y is None and x is None:
+        return True
     return abs(x - y) < 1e-6
 
 # Q1 Tests
