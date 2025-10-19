@@ -4,3 +4,5 @@ This function should return the Euclidean distance between these two points.
 """
 
 def calculate_distance(x1, y1, x2, y2):
+  distance = ((x1-x2)**2 + (y1-y2)**2)**0.5
+  return distance
