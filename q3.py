@@ -4,3 +4,5 @@ This function should return the solution written in readME file. You can assume 
 """
 
 def solve_quadratic(a, b, c):
+  x = (-1 * b - (b**2 - 4*a*c)**0.5) / (2*a)
+  return x
