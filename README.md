@@ -29,9 +29,9 @@ Implement a function named `to_celcius` that converts a temperature from Fahrenh
 ### Formula:
 The conversion from Fahrenheit to Celcius follows this formula:
 
-\[
+
 C = $(F - 32) / 1.8$
-\]
+
 
 where C is the temperature in Celcius, F is the temperature in Fahrenheit.
 
@@ -67,9 +67,9 @@ Implement a function named `calculate_distance`, which takes four arguments: `x1
 ### Formula:
 The Euclidean distance between two points \((x_1, y_1)\) and \((x_2, y_2)\) is given by:
 
-\[
+
 d = $\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
-\]
+
 
 ### Examples:
 `calculate_distance(-2, -2, -2, -2)` should return `0`
