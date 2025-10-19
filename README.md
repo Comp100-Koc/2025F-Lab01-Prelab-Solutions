@@ -11,7 +11,7 @@ Remember that the testcases inside the `test.py` are just sample testcases, and 
 
 *Hint: In order to calculate the square root of a number, you can raise it to the power of 0.5*
 
-## Question 0 (Bonus Question)
+## Question 0 (Warm-up Question)
 A quadratic equation is an equation of the form $ax^2+bx+c=0$.
 
 One of the solutions of the quadratic equation is $$x=\frac{-b-\sqrt{b^2-4ac}}{2a}$$
