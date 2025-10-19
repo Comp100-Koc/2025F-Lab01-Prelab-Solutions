@@ -7,40 +7,109 @@ Remember that the testcases inside the `test.py` are just sample testcases, and 
 
 **DO NOT MODIFY THE `test.py` FILE.**
 
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/qDWf2xfs)
 
-**Hint: In order to calculate the square root of a number, you can raise it to the power of 0.5**
+*Hint: In order to calculate the square root of a number, you can raise it to the power of 0.5*
 
-## Question 1
-In this question, we want to implement a python function that calculates the mathematical function `f(x) = (5x-3) / (2x+6)`.
+## Question 1 (25 Points)
 
-Implement a function named `calculate_f`, which takes `x` as an argument, and returns `(5x-3) / (2x+6)`.
+### Part a
 
-### Examples:
-`calculate_f(3)` should return `1.0`
+In this question, we want to calculate the Euclidean distance between two points in a 2D plane.
 
-`calculate_f(6)` should return `1.5`
+Implement a function named `distance`, which takes four arguments: `x1`, `y1`, `x2`, and `y2`, representing the coordinates of two points `(x1, y1)` and `(x2, y2)`. This function should return the Euclidean distance between these two points.
 
-`calculate_f(15.0)` should return `2.0`
-
-
-## Question 2
-Implement a function named `to_celcius` that converts a temperature from Fahrenheit to Celsius. It takes one argument: `f`, which is the temperature in Fahrenheit. This function should return the temperature in Celcius.
-
-### Formula:
-The conversion from Fahrenheit to Celcius follows this formula:
+#### Formula:
+The Euclidean distance between two points \((x_1, y_1)\) and \((x_2,
+y_2)\) is given by: $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
 
 
-C = $(F - 32) / 1.8$
+#### Examples:
+
+```python
+distance(-2, -2, -2, -2) # should return 0
+distance(0, 3, 4, 0) # should return 5.0
+distance(3, 5, 9, 13) # should return 10
+```
+
+### Part b
+
+In this question, we want to calculate the area of a triangle, given the length of its three sides.
+
+Implement a function named `area_from_sides`, which takes three arguments: `a`, `b`, and `c`, which are the lengths of the three sides. This function should return the area of the triangle.
+
+You can use [Heron's formula](https://en.wikipedia.org/wiki/Heron%27s_formula) to calculate the area.
+
+#### Examples:
+```python
+area_from_sides(6.25, 4.25, 6.5) # should return 12.75
+
+area_from_sides(20.5, 20.5, 9) # should return 90.0
+```
+
+### Part c
+
+In this question, we want to calculate the area of a triangle given
+the (x, y) coordinates of its three vertices. 
+
+Implement a function named `area_from_vertices`, which takes six
+arguments: `x1`, `y1`,  `x2`, `y2`, `x3`, `y3`
+
+You *must re-use* the functions you've already written in parts a and b, because
+functions are ment to be re-used to make things easier.
+
+**Hint:** 
+
+1. First calculate the three sides by calling the `distance`
+function you wrote in Question 2 on each pair of vertices. Assign the results to intermediate
+variables; for example `s12`, `s13`, `s23` 
+
+2. Then use the `area_from_sides` function you wrote in Question 3
+
+3. Make sure to *return* the final result!
+
+#### Examples:
+
+```python
+area_from_vertices(0, 0, 3, 0, 0, 4) # should return 6
+
+area_from_vertices(-3.5, 0, 3.5, 0, 0, 5) # should return 17.5
+```
+
+## Question 2: Temperature Converter (25 Points)
+
+Write a function `convert_temperature` that converts temperatures
+between Fahrenheit and Celcius. The function should take two
+parameters: the temperature to convert and the unit of the input
+temperature ('F' for Fahrenheit, 'C' for Celsius). Based on these
+parameters, the function should return the converted temperature.
+
+### Requirements:
+
+- Use `if-else` statements to determine the direction of the conversion.
+- Round the result to 2 decimal places.
+- If an invalid unit is provided, return `None`
+
+### Formulae:
+
+- Celsius to Fahrenheit: `F = (C * 1.8) + 32`
+
+- Fahrenheit to Celsius: `C = (F - 32) / 1.8`
+
+- You may find the `round` function useful. It takes a float f, and an
+  integer n as arguments and returns f rounded to n places. E.g
+  `round(2.6786, 3)` returns `2.679`
+  
+### Example Usage:
+
+```python
+print(convert_temperature(100, 'C')) # Output: 212.0
+print(convert_temperature(32, 'F')) # Output: 0.0
+print(convert_temperature(20, 'X')) # Output: None
+```
 
 
-where C is the temperature in Celcius, F is the temperature in Fahrenheit.
-
-### Examples: 
-`to_celcius(32)` should return `0.0`
-
-`to_celcius(75)` should return `28.89`
-
-## Question 3
+## Question 3 (Bonus Question)
 A quadratic equation is an equation of the form $ax^2+bx+c=0$.
 
 One of the solutions of the quadratic equation is $$x=\frac{-b-\sqrt{b^2-4ac}}{2a}$$
@@ -56,37 +125,3 @@ Implement a function named `solve_quadratic` which takes three arguments: `a`, `
 
 `solve_quadratic(5, -33, 50.4)` should return `2.4`
 
-
-## Question 4
-
-
-In this question, we want to calculate the Euclidean distance between two points in a 2D plane.
-
-Implement a function named `calculate_distance`, which takes four arguments: `x1`, `y1`, `x2`, and `y2`, representing the coordinates of two points `(x1, y1)` and `(x2, y2)`. This function should return the Euclidean distance between these two points.
-
-### Formula:
-The Euclidean distance between two points \((x_1, y_1)\) and \((x_2, y_2)\) is given by:
-
-
-d = $\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
-
-
-### Examples:
-`calculate_distance(-2, -2, -2, -2)` should return `0`
-
-`calculate_distance(0, 3, 4, 0)` should return `5.0`
-
-`calculate_distance(3, 5, 9, 13)` should return `10`
-
-## Question 5
-
-In this question, we want to calculate the area of a triangle, given the length of its three sides.
-
-Implement a function named `calculate_area`, which takes three arguments: `a`, `b`, and `c`, which are the lengths of the three sides. This function should return the area of the triangle.
-
-**Hint:** You can use [Heron's formula](https://en.wikipedia.org/wiki/Heron%27s_formula) to calculate the area.
-
-### Examples:
-`calculate_area(6.25, 4.25, 6.5)` should return `12.75`
-
-`calculate_area(20.5, 20.5, 9)` should return `90.0`
