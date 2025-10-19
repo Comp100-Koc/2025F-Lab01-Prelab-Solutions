@@ -4,3 +4,6 @@ This function should return the area of the triangle.
 """
 
 def calculate_area(a, b, c):
+  s = 0.5 * (a+b+c)
+  A = (s*(s-a)*(s-b)*(s-c))**0.5
+  return A
