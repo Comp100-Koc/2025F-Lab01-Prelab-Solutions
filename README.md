@@ -1,6 +1,6 @@
 # 2025F-Lab01-Prelab-Solutions
 
-This prelab has 5 questions. In each question, you are asked to implement a specific function. You must implement each function in the corresponding file. In other words, you should implement the function for Question 1 in `q1.py`, the function for Question 2 in `q2.py` and so on.
+This prelab has 2 questions. In each question, you are asked to implement a specific function. You must implement each function in the corresponding file. In other words, you should implement the function for Question 1 in `q1.py`, the function for Question 2 in `q2.py` and so on.
 
 You can run the `test.py` file to check whether your implementation is correct or not.
 Remember that the testcases inside the `test.py` are just sample testcases, and additional testcases will be used while grading.
