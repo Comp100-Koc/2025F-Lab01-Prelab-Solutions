@@ -61,7 +61,7 @@ def test_q2_6(): return convert_temperature(-40, "C"), -40
 
 def test_q3_1(): return solve_quadratic(1, -5, 6), 2
 def test_q3_2(): return solve_quadratic(5, -33, 50.4), 2.4
-def test_q3_3(): return solve_quadratic(5, -33, 50.4), 2.4
+def test_q3_3(): return solve_quadratic(2, 25, 75), -7.5
 
 tests = {
     'q1a': [test_q1a_1, test_q1a_2, test_q1a_3],
