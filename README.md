@@ -121,7 +121,7 @@ Implement a function named `solve_quadratic` which takes three arguments: `a`, `
 **Note:** For a quadratic equation, $x=\frac{-b+\sqrt{b^2-4ac}}{2a}$ is also a solution. However, please ignore this and only return the solution written above.
 
 ### Examples: 
-`solve_quadratic(1, -5, 6)` should return `2.0`
-
-`solve_quadratic(5, -33, 50.4)` should return `2.4`
-
+```python
+print(solve_quadratic(1, -5, 6)) # Output 2.0
+print(solve_quadratic(5, -33, 50.4)) # Output 2.4
+```
