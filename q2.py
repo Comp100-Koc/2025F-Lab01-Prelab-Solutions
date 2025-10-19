@@ -4,7 +4,7 @@ convert_temperature takes two arguments: temp and unit, which are the temperatur
 """
 
 def convert_temperature(temp, unit):
-  if unit != "C" or unit != "F":
+  if unit != "C" and unit != "F":
     return None
   if unit == 'F':
     C = (temp - 32) / 1.8
