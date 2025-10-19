@@ -1,5 +1,5 @@
 """
-Implement a function named convert_temperature that converts a temperature from Fahrenheit to Celsius or from Celsius to Fahrenheit. 
+Implement a function named convert_temperature that converts a temperature between Fahrenheit and Celsius. 
 convert_temperature takes two arguments: temp and unit, which are the temperature and its unit.
 """
 
