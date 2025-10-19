@@ -1,8 +1,10 @@
 """
-Implement a function named to_celcius that converts a temperature from Fahrenheit to Celsius. 
-to_celsius takes one argument: f, which is the temperature in Fahrenheit and should return the temperature in Celsius.
+Implement a function named convert_temperature that converts a temperature from Fahrenheit to Celsius or from Celsius to Fahrenheit. 
+convert_temperature takes two arguments: temp and unit, which are the temperature and its unit.
 """
 
-def to_celsius(f):
-  c = (f-32)/1.8
-  return c
+def convert_temperature(temp, unit):
+  if unit == 'F':
+    C = (temp - 32) / 1.8
+  elif unit == 'C':
+    F = (temp * 1.8) + 32
