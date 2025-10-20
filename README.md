@@ -103,7 +103,7 @@ parameters, the function should return the converted temperature.
 
 ### Requirements:
 
-- Use `if-else` statements to determine the direction of the conversion.
+- Use an `if-elif-else` statement to determine the direction of the conversion.
 - Round the result to 2 decimal places.
 - If an invalid unit is provided, return `None`
 
