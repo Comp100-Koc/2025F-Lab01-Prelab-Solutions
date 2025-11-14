@@ -7,7 +7,8 @@ Remember that the testcases inside the `test.py` are just sample testcases, and 
 
 **DO NOT MODIFY THE `test.py` FILE.**
 
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/qDWf2xfs)
+<!---[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/qDWf2xfs)-->
+
 
 *Hint: In order to calculate the square root of a number, you can raise it to the power of 0.5*
 
