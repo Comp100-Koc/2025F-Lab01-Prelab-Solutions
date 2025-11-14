@@ -1,4 +1,4 @@
-# 2025F-Lab01-Prelab
+# Lab01-Prelab
 
 This prelab has 2 questions. In each question, you are asked to implement a specific function. You must implement each function in the corresponding file. In other words, you should implement the function for Question 1 in `q1.py`, the function for Question 2 in `q2.py` and so on.
 
